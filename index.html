@@ -106,4 +106,21 @@
 
     </body>
     </section>
+    <script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    // e.preventDefault(); // Prevent page reload
+
+    const name = this.elements.name.value;
+    const phone = this.elements.phone.value;
+    const email = this.elements.email.value;
+    const preference = this.elements.preference.value;
+
+    alert(
+      `Name: ${name}\nPhone no: ${phone}\nEmail: ${email}\nPreference: ${preference}`
+    );
+
+    console.log("Ticket has been booked successfully");
+  });
+</script>
+
 </html>
