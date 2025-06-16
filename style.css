@@ -1,0 +1,205 @@
+/* /* For element selectors
+h1{
+    color: darkblue;
+}
+
+.one{
+    color: aqua;
+}
+
+.pop{
+    color: beige;
+}
+
+
+#luck{
+    color: blue;
+}
+*{
+    color: brown;
+}
+.pad{
+    background-color: aqua;
+    color: black;
+    padding-top: 100px;
+    margin-top: 100px;
+    border-color: chartreuse;
+    border-width: 10px;
+    border-style: double;
+}
+.H{
+ background-color: red;
+ 
+ 
+}
+ div{
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 250px;
+    padding: 50px;
+} 
+
+div{
+    background-color: black;
+    border-color: red;
+    border-width: 10px;
+    border-style: solid;
+    width: 250px;
+    margin: 50px;
+
+}
+.EX4{
+    background-color: black;
+    height: 100px;
+    padding-top: 50px;
+}
+.EX5{
+    background-color: gainsboro;
+    border-color: black;
+    border-width: 10px;
+    border-style: solid;
+    margin: 20px;
+    height: 100px;
+    padding: 50px;
+} */
+/* .v{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+  
+}
+.y{
+     
+    background-color:yellow;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+
+}
+.x{
+    background-color: aquamarine;
+    display: inline;
+}
+.z{
+    background-color: bisque;
+    display: inline;
+} */
+
+/*{
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+   
+        background-color: black;
+        color:white;
+        padding: 20px;
+}
+
+    h1,ul,li{
+        display: inline;
+    }
+    ul{
+        margin-left: 1000px;
+    }
+    li{
+         color:yellow;
+    }
+    li:hover{
+         color: pink;
+         cursor:pointer;
+    }
+    input{
+        /* 
+        margin-left: 30%;
+        margin-top: 4%;
+        margin-bottom: 4%; 
+        width: 740px;
+        padding: 20px;
+        border-color: cornflowerblue;
+        
+    }
+        
+    .Search{
+          padding: 70px;
+          text-align: center;
+    }
+
+.fir{
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+    width: 225px;
+}
+
+.sec{
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+    width: 225px;
+}
+
+
+.thi{
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+    width: 225px;
+}
+
+.fo{
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+    width: 225px;
+   
+}
+.Mobiles{
+    text-align: center;
+}
+.Mobiles :hover{
+    background-color: pink;
+}
+.ab{
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    padding: 15px;
+}
+
+.con{
+    background-color: black;
+    color: white;
+    text-align: center;
+} */
+
+        body{
+            font-family: Arial, sans-serif;
+            margin:20px;
+            border-radius: 1.6;
+        }
+        h1,h2{color: #2c3e50;}
+       code{ 
+            background: #fd0202;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        section{
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        img{
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            margin-top: 10px;
+            
+        }
+
+    
+   
