@@ -23,7 +23,7 @@
       padding: 10px;
     }
     button {
-      width: 100%;
+      width: 50%;
       padding: 10px;
       background: #007bff;
       color: #fff;
@@ -68,6 +68,8 @@
       if (Username && password) {
         if (localStorage.getItem(Username)) {
           document.getElementById('signupmessage').innerText = "User already exists.";
+          document.getElementById('signupusername').value = '';
+          document.getElementById('signuppassword').value = '';
         } else {
           localStorage.setItem(Username, password);
           document.getElementById('signupmessage').innerText = "Signup successful";
