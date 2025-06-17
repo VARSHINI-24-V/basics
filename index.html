@@ -1,119 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>BASICS</title>
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="icon" href="Screenshot 2025-06-08 232237.png">
+<meta charset="UTF-8">
+<title>Login and signup page</title>
+<style>
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        margin: 20px;
+    }
+    .container{
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background: #f5f5f5;
+    }
+    input{
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+    }
+    button{
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+    button:hover{
+        background: #0056b3;
+    }
+    p{
+        color:red;
+    }
+</style>
 </head>
-
 <body>
-
-    <h1>Learning HTML</h1>
-    <p>THIS IS PARAGRAPH, <em>VARSH</em>, <u>AD</u></p>
-
-    <ol>
-        <h2>Ordered list</h2>
-        <li>Varsh</li>
-        <li>2nd AD</li>
-    </ol>
-
-    <ul>
-        <h2>Unordered list</h2>
-        <li>Artificial Intelligence</li>
-        <li>2nd AD</li>
-    </ul>
-
-    <h2>2. Links and Images</h2>
-    <p>Visit <a href="projectcss.html" target="_blank">click</a></p>
-    <img src="Screenshot 2025-06-08 232303.png" alt="alt image" height="220px" width="220px">
-
-    <h2>3. Tables</h2>
-    <table border="10" cellpadding="10">
-        <tr>
-            <th>Name</th>
-            <th>Year</th>
-            <th>Dept</th>
-        </tr>
-        <tr>
-            <td>Varsh</td>
-            <td>1st</td>
-            <td>AD</td>
-        </tr>
-        <tr>
-            <td>Ram</td>
-            <td>2nd</td>
-            <td>CSE</td>
-        </tr>
-        <tr>
-            <td>Krish</td>
-            <td>2nd</td>
-            <td>ECE</td>
-        </tr>
-    </table>
-
-    <h2>4. Forms</h2>
-    <form>
-        <label>Name: <input type="text" name="name"></label><br><br>
-        <label>Email: <input type="email" name="email"></label><br><br>
-        <label>Gender:
-            <input type="radio" name="gender" value="Male"> Male
-            <input type="radio" name="gender" value="Female"> Female
-        </label><br><br>
-        <label>Dept:
-            <select name="dept">
-                <option>AD</option>
-                <option>CSE</option>
-                <option>ECE</option>
-            </select>
-        </label><br><br>
-        <label>Message:<br>
-            <textarea name="message" rows="4" cols="20"></textarea>
-        </label><br><br>
-        <input type="submit" value="Submit">
-    </form>
-
-    <h2>5. Audio and Video</h2>
-    <audio controls>
-        <source src="Badass-MassTamilan.dev.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio><br><br>
-    <video width="220px" height="220px" controls>
-        <source src="Chernobyl_2023_Tamil_S01_E01-05_HBO_Max_WEB-DL_(Playtamil.loan).mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <h2>Task Day - Ticket Booking Form</h2>
-    <form id="bookingForm">
-        <label>Name:</label> <input type="text" name="name"><br><br>
-        <label>Phone no:</label> <input type="number" name="phone"><br><br>
-        <label>Email:</label> <input type="email" name="email"><br><br>
-        <label>Preference:</label>
-        <select name="preference">
-            <option>Thriller</option>
-            <option>Comedy</option>
-            <option>Sci-fi</option>
-            <option>Feel good</option>
-        </select><br><br>
-        <input type="submit" value="Pay Now">
-    </form>
-
+    <h1>Login /signup</h1>
+    <div class="container">
+        <h2>Signup</h2>
+        <input id="signupusername" placeholder="Username">
+        <input id="signuppassword" type="password" placeholder="Password">
+        <button id="signupbtn">Signup</button>
+        <p id="signupmessage"></p>
+        
+    </div>
+    <br>
+    <div class="container">
+        <h2>Login</h2>
+        <input id="loginusername" placeholder="Username">
+        <input id="loginpassword" type="password" placeholder="Password">
+        <button id="loginbtn">Signup</button>
+        <p id="loginmessage"></p>
+        
+    </div>
     <script>
-        document.querySelector('#bookingForm').addEventListener('submit', function(e) {
-            // e.preventDefault(); // Prevent form submission
-
-            const name = this.elements.name.value;
-            const phone = this.elements.phone.value;
-            const email = this.elements.email.value;
-            const preference = this.elements.preference.value;
-
-            alert(
-                `Name: ${name}\nPhone no: ${phone}\nEmail: ${email}\nPreference: ${preference} \n\n "Ticket has been booked successfully"`
-            );
-
+        document.getElementById('signupbtn').addEventListener('click',()=>{
+            const Username=document.getElementById('signupusername').value.trim();
+            const password=document.getElementById('signuppassword').value.trim();
+       if(Username && password){
+        if(localStorage.getItem(Username)){
+            document.getElementById('signupmessage').innerText="user already exists.";
+        }
+        else{
+            localStorage.setItem(Username,password);
+            document.getElementById('signupmessage').innerText="signup sucessful";
+            document.getElementById('signupusername').value='';
+            document.getElementById('signuppassword').value='';
+        }
+       }
+       else{
+        document.getElementById('signupmessage').innerText="please fill all the feilds.";
             
-        });
-    </script>
+       }
+        }
 
+         document.getElementById('loginbtn').addEventListener('click',()=>{
+            const Username=document.getElementById('loginusername').value.trim();
+            const password=document.getElementById('loginpassword').value.trim();
+       if(Username && password){
+        if(localStorage.getItem(Username)){
+            document.getElementById('loginmessage').innerText="Login successful.";
+             document.getElementById('loginusername').value='';
+            document.getElementById('loginpassword').value='';
+        }
+        else{
+            document.getElementById('loginmessage').innerText="Invalid Username or Password";
+        }
+       }
+       else{
+        document.getElementById('loginmessage').innerText="please fill all the fields.";
+            
+       }
+        }
+    
+    
+    
+    
+    
+    );
+    </script>
 </body>
 </html>
