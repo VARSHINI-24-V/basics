@@ -58,9 +58,7 @@
     <button id="loginbtn">Login</button>
     <p id="loginmessage"></p>
   </div>
- <center>
-  
- </center>
+
   <script>
     // Signup
     document.getElementById('signupbtn').addEventListener('click', () => {
@@ -70,14 +68,12 @@
       if (Username && password) {
         if (localStorage.getItem(Username)) {
           document.getElementById('signupmessage').innerText = "User already exists.";
-          document.getElementById('signupusername').value = '';
-          document.getElementById('signuppassword').value = '';
         } else {
           localStorage.setItem(Username, password);
           document.getElementById('signupmessage').innerText = "Signup successful";
-          document.getElementById('signupusername').value = '';
-          document.getElementById('signuppassword').value = '';
         }
+        document.getElementById('signupusername').value = '';
+        document.getElementById('signuppassword').value = '';
       } else {
         document.getElementById('signupmessage').innerText = "Please fill all the fields.";
       }
@@ -91,15 +87,10 @@
       if (Username && password) {
         const storedPassword = localStorage.getItem(Username);
         if (storedPassword && storedPassword === password) {
-  document.getElementById('loginmessage').innerText = "Login successful. Redirecting...";
-  setTimeout(() => {
-    window.location.href = "task 1.html"; // 👈 change to your notes page path
-  }, 1000); // wait 1 second before redirecting
-} else {
-  document.getElementById('loginmessage').innerText = "Invalid Username or Password";
-}
-
-
+          document.getElementById('loginmessage').innerText = "Login successful. Redirecting...";
+          setTimeout(() => {
+            window.location.href = "task 1.html";
+          }, 1000);
         } else {
           document.getElementById('loginmessage').innerText = "Invalid Username or Password";
         }
